@@ -8,7 +8,7 @@ import BuyLinksUS from "../../dtos/BuyLinksUS";
 import GoodreadsWidget from "./GoodreadsWidget";
 import whispers from "../../images/book-covers/small/Whispers.png";
 import blackwing from "../../images/book-covers/small/Blackwing.png";
-import trees from "../../images/Trees.png";
+import kickstarter from "../../images/KickStarter Lead Wide.png";
 import map from "../../images/Seann Aite.png";
 import arrow from "../../images/Arrow.png";
 import { BookItem } from "./BookItem";
@@ -87,8 +87,14 @@ function MainPage() {
         <HeaderMenu />
         <BuyModal onClick={openBuy} />
         <div className="series-title">
-          <img src={trees} alt="Tales of the Seann Àite" />
-          <h2>- Tales of the Seann Àite -</h2>
+          {/* <img src={trees} alt="Tales of the Seann Àite" />
+          <h2>- Tales of the Seann Àite -</h2> */}
+          <a href="https://www.kickstarter.com/projects/tristangray/call-of-the-black-wing-an-audiobook">
+            <img
+              src={kickstarter}
+              alt="Call of the Black Wing Audiobook Kickstarter"
+            />
+          </a>
         </div>
         <div className="buy-direct">
           <img className="arrow arrow-one" src={arrow} alt="Arrow" />

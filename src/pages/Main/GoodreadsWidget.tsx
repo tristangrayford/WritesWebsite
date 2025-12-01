@@ -33,8 +33,8 @@ function GoodreadsWidget() {
             <div className="gr_review_stats">
               reviews: 85
               <br />
-              ratings: 132 <br />
-              (avg rating 3.93)
+              ratings: 136 <br />
+              (avg rating 3.88)
             </div>
           </div>
           <div className="gr_book_container">
@@ -58,10 +58,10 @@ function GoodreadsWidget() {
             </a>
             <br />
             <div className="gr_review_stats">
-              reviews: 14
+              reviews: 17
               <br />
-              ratings: 29 <br />
-              (avg rating 4.59)
+              ratings: 38 <br />
+              (avg rating 4.11)
             </div>
           </div>
         </div>
