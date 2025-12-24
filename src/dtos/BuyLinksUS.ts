@@ -3,7 +3,6 @@ import LinkDictionary from "./LinkDictionary";
 const BuyLinksUS: LinkDictionary = {
     "Whispers":  [
         {"title": "Direct from the author", "link": "https://ko-fi.com/s/183edaac59"},
-        {"title": "Amazon US", "link": "https://www.amazon.com/Whispers-Crow-Tales-Seann-%C3%80ite-ebook/dp/B08FZX3682"},
         {"title": "Barnes and Noble", "link": "https://www.barnesandnoble.com/w/whispers-to-a-crow-tristan-gray/1137511207"},
         {"title": "Kobo US", "link": "https://www.kobo.com/us/en/ebook/whispers-to-a-crow"},
         {"title": "Apple Books US", "link": "https://tools.applemediaservices.com/book/1563887707?country=us&ref=1445749546"},
@@ -50,7 +49,6 @@ const BuyLinksUS: LinkDictionary = {
     ],
     "Call": [
         {"title": "Direct from the author", "link": "https://ko-fi.com/tristangray/shop"},
-        {"title": "Amazon US", "link": "https://www.amazon.com/Call-Black-Wing-Tales-Seann-ebook/dp/B0D94WWPLH"},
         {"title": "Barnes and Noble", "link": "https://www.barnesandnoble.com/w/call-of-the-black-wing-tristan-gray/1145979893"},
         {"title": "Apple Books", "link": "https://books.apple.com/us/book/call-of-the-black-wing/id6529521148"},
         {"title": "Smashwords", "link": "https://www.smashwords.com/books/view/1588128"},

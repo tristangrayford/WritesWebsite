@@ -3,7 +3,6 @@ import LinkDictionary from "./LinkDictionary";
 const BuyLinksUK: LinkDictionary = {
     "Whispers":  [
         {"title": "Direct from the author", "link": "https://ko-fi.com/s/183edaac59"},
-        {"title": "Amazon UK", "link": "https://www.amazon.com/Whispers-Crow-Tales-Seann-%C3%80ite-ebook/dp/B08FZX3682"},
         {"title": "Kobo UK", "link": "https://www.kobo.com/gb/en/ebook/whispers-to-a-crow"},
         {"title": "Apple Books UK", "link": "https://tools.applemediaservices.com/book/1563887707?country=gb&ref=1445749546"},
         {"title": "Waterstones UK", "link": "https://www.waterstones.com/book/whispers-to-a-crow/tristan-gray/9781838485405"},
@@ -44,7 +43,6 @@ const BuyLinksUK: LinkDictionary = {
     "Call": [
         {"title": "Direct from the author", "link": "https://ko-fi.com/tristangray/shop"},
         {"title": "bookshop.org", "link": "https://uk.bookshop.org/a/5108/9781805178910"},
-        {"title": "Amazon UK", "link": "https://www.amazon.co.uk/Call-Black-Wing-Tristan-Gray-ebook/dp/B0D94WWPLH"},
         {"title": "Kobo UK", "link": "https://www.kobo.com/gb/en/ebook/call-of-the-black-wing"},
         {"title": "Apple Books UK", "link": "https://books.apple.com/gb/book/call-of-the-black-wing/id6529521148"},
     ]

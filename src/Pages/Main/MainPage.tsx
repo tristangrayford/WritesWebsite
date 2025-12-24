@@ -1,6 +1,4 @@
-import { useRef, useState } from "react";
-import { Book } from "../../dtos/enums";
-import BuyPopup from "../Buy/BuyPopup";
+import { useState } from "react";
 import BuyModal from "../BuyModal/BuyModal";
 import HeaderMenu from "../Menu/HeaderMenu";
 import BuyLinksUK from "../../dtos/BuyLinksUK";
@@ -16,8 +14,8 @@ import CallVideo from "../../videos/Call of the Black Wing Intro From Mhairi Bry
 
 const whispersDesc = (
   <p>
-    Paid to unearth the fate of the children of the Three Willows, Fiadh expects
-    the work of a predatory fey.
+    The first tale in Call of the Black Wing - Paid to unearth the fate of the
+    children of the Three Willows, Fiadh expects the work of a predatory fey.
     <br />
     <br /> But this was a very different kind of monster who preyed upon the
     village folk. One that would leave her no choice but to journey into the
@@ -50,27 +48,8 @@ const fullDesc = (
 );
 
 function MainPage() {
-  const [selected, setSelected] = useState(false);
+  const [selected] = useState(false);
   const [mapClicked, setMapClicked] = useState(false);
-
-  const buyElement = useRef<null | BuyPopup>(null);
-
-  const onClick = async (book: Book) => {
-    if (book !== Book.None) {
-      await setSelected(true);
-      if (buyElement.current == null) {
-      } else {
-        buyElement.current.setBook(book);
-      }
-    }
-  };
-
-  const onClose = () => {
-    setSelected(false);
-  };
-  const openBuy = () => {
-    onClick(Book.Whispers);
-  };
 
   return (
     <div className="App">
@@ -85,7 +64,7 @@ function MainPage() {
           src="https://www.goodreads.com/author/author_widget/20606471.Tristan_Gray?widget_id=1699907161"
         ></script>
         <HeaderMenu />
-        <BuyModal onClick={openBuy} />
+        <BuyModal />
         <div className="series-title">
           {/* <img src={trees} alt="Tales of the Seann Àite" />
           <h2>- Tales of the Seann Àite -</h2> */}
@@ -114,18 +93,18 @@ function MainPage() {
             ></iframe>
           </div>
           <BookItem
-            bookItemContent={whispersDesc}
-            bookItemTitle="Whispers To A Crow"
-            bookItemImage={whispers}
-            bookItemLinksUK={BuyLinksUK["Whispers"]}
-            bookItemLinksUS={BuyLinksUS["Whispers"]}
-          />
-          <BookItem
             bookItemContent={fullDesc}
             bookItemTitle="Call of the Black Wing"
             bookItemImage={blackwing}
             bookItemLinksUK={BuyLinksUK["Call"]}
             bookItemLinksUS={BuyLinksUS["Call"]}
+          />
+          <BookItem
+            bookItemContent={whispersDesc}
+            bookItemTitle="Whispers To A Crow"
+            bookItemImage={whispers}
+            bookItemLinksUK={BuyLinksUK["Whispers"]}
+            bookItemLinksUS={BuyLinksUS["Whispers"]}
           />
           <div className="map-container">
             <h2>Map of Seann Àite</h2>
@@ -146,7 +125,6 @@ function MainPage() {
           </div>
         </div>
         <GoodreadsWidget />
-        {selected ? <BuyPopup onClose={onClose} ref={buyElement} /> : null}
       </div>
     </div>
   );

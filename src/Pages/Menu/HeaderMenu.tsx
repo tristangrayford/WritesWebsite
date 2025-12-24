@@ -88,7 +88,7 @@ class HeaderMenu extends React.Component<{}, MenuState> {
           <a
             target="_blank"
             rel="noreferrer"
-            href="mailto:tristan@eidyngray.co.uk?subject=Website Contact"
+            href="mailto:tristan@eidyngray.scot?subject=Website Contact"
           >
             <p>@</p>
           </a>
