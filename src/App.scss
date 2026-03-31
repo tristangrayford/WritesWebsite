@@ -1,5 +1,5 @@
 @use "sass:meta";
-@import url('https://fonts.googleapis.com/css?family=Metamorphous');
+@import url("https://fonts.googleapis.com/css?family=Metamorphous");
 
 @include meta.load-css("styles/params");
 
@@ -16,3 +16,4 @@
 @include meta.load-css("styles/blogpage");
 @include meta.load-css("styles/ednowrimo");
 @include meta.load-css("styles/consultationresponsepage");
+@include meta.load-css("styles/reader");

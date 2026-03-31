@@ -1,6 +1,5 @@
 import { useState } from "react";
 import BuyModal from "../BuyModal/BuyModal";
-import HeaderMenu from "../Menu/HeaderMenu";
 import BuyLinksUK from "../../dtos/BuyLinksUK";
 import BuyLinksUS from "../../dtos/BuyLinksUS";
 import GoodreadsWidget from "./GoodreadsWidget";
@@ -52,80 +51,73 @@ function MainPage() {
   const [mapClicked, setMapClicked] = useState(false);
 
   return (
-    <div className="App">
-      <div
-        className={
-          "main-page" + (selected || mapClicked ? " popup-active" : "")
-        }
-      >
-        <script
-          type="text/javascript"
-          charSet="utf-8"
-          src="https://www.goodreads.com/author/author_widget/20606471.Tristan_Gray?widget_id=1699907161"
-        ></script>
-        <HeaderMenu />
-        <BuyModal />
-        <div className="series-title">
-          {/* <img src={trees} alt="Tales of the Seann Àite" />
+    <div
+      className={"main-page" + (selected || mapClicked ? " popup-active" : "")}
+    >
+      <script
+        type="text/javascript"
+        charSet="utf-8"
+        src="https://www.goodreads.com/author/author_widget/20606471.Tristan_Gray?widget_id=1699907161"
+      ></script>
+      <BuyModal />
+      <div className="series-title">
+        {/* <img src={trees} alt="Tales of the Seann Àite" />
           <h2>- Tales of the Seann Àite -</h2> */}
-          <a href="https://www.kickstarter.com/projects/tristangray/call-of-the-black-wing-an-audiobook">
-            <img
-              src={kickstarter}
-              alt="Call of the Black Wing Audiobook Kickstarter"
-            />
-          </a>
-        </div>
-        <div className="buy-direct">
-          <img className="arrow arrow-one" src={arrow} alt="Arrow" />
-          <a href="https://ko-fi.com/tristangray/shop">
-            Click to Buy The Tales From Me Directly
-          </a>
-          <img className="arrow arrow-two" src={arrow} alt="Arrow" />
-        </div>
-        <div className="books">
-          <div className="video-container">
-            <h2>A reading from Call of the Black Wing</h2>
-            <h3>Reader: Mhairi Bryce</h3>
-            <iframe
-              title="Call of the Black Wing Video"
-              className="embed-video"
-              src={CallVideo}
-            ></iframe>
-          </div>
-          <BookItem
-            bookItemContent={fullDesc}
-            bookItemTitle="Call of the Black Wing"
-            bookItemImage={blackwing}
-            bookItemLinksUK={BuyLinksUK["Call"]}
-            bookItemLinksUS={BuyLinksUS["Call"]}
+        <a href="https://www.kickstarter.com/projects/tristangray/call-of-the-black-wing-an-audiobook">
+          <img
+            src={kickstarter}
+            alt="Call of the Black Wing Audiobook Kickstarter"
           />
-          <BookItem
-            bookItemContent={whispersDesc}
-            bookItemTitle="Whispers To A Crow"
-            bookItemImage={whispers}
-            bookItemLinksUK={BuyLinksUK["Whispers"]}
-            bookItemLinksUS={BuyLinksUS["Whispers"]}
-          />
-          <div className="map-container">
-            <h2>Map of Seann Àite</h2>
-            <p>Click to see more</p>
-            <button
-              className={
-                mapClicked ? "map-selected map-section" : "map-section"
-              }
-            >
-              <img
-                alt="map of Seann Àite"
-                src={map}
-                onClick={() => {
-                  setMapClicked(!mapClicked);
-                }}
-              />
-            </button>
-          </div>
-        </div>
-        <GoodreadsWidget />
+        </a>
       </div>
+      <div className="buy-direct">
+        <img className="arrow arrow-one" src={arrow} alt="Arrow" />
+        <a href="https://ko-fi.com/tristangray/shop">
+          Click to Buy The Tales From Me Directly
+        </a>
+        <img className="arrow arrow-two" src={arrow} alt="Arrow" />
+      </div>
+      <div className="books">
+        <div className="video-container">
+          <h2>A reading from Call of the Black Wing</h2>
+          <h3>Reader: Mhairi Bryce</h3>
+          <iframe
+            title="Call of the Black Wing Video"
+            className="embed-video"
+            src={CallVideo}
+          ></iframe>
+        </div>
+        <BookItem
+          bookItemContent={fullDesc}
+          bookItemTitle="Call of the Black Wing"
+          bookItemImage={blackwing}
+          bookItemLinksUK={BuyLinksUK["Call"]}
+          bookItemLinksUS={BuyLinksUS["Call"]}
+        />
+        <BookItem
+          bookItemContent={whispersDesc}
+          bookItemTitle="Whispers To A Crow"
+          bookItemImage={whispers}
+          bookItemLinksUK={BuyLinksUK["Whispers"]}
+          bookItemLinksUS={BuyLinksUS["Whispers"]}
+        />
+        <div className="map-container">
+          <h2>Map of Seann Àite</h2>
+          <p>Click to see more</p>
+          <button
+            className={mapClicked ? "map-selected map-section" : "map-section"}
+          >
+            <img
+              alt="map of Seann Àite"
+              src={map}
+              onClick={() => {
+                setMapClicked(!mapClicked);
+              }}
+            />
+          </button>
+        </div>
+      </div>
+      <GoodreadsWidget />
     </div>
   );
 }

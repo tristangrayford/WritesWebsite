@@ -1,4 +1,3 @@
-import HeaderMenu from "../Menu/HeaderMenu";
 import Swiper from "./Swiper";
 import dragonbone from "../../images/recommendations/Dragonbone Chair.jpg";
 import magician from "../../images/recommendations/Magician.jpg";
@@ -158,19 +157,16 @@ function RecommendationsPage() {
   ];
 
   return (
-    <div className="App">
-      <HeaderMenu />
-      <div className="recommendations-page">
-        <h1>Recommendations</h1>
-        <h2>Conventional Novels</h2>
-        <Swiper children={books} />
-        <h2>Graphic Novels</h2>
-        <Swiper children={graphicNovels} />
-        <h2>Video Games</h2>
-        <Swiper children={games} />
-        <h2>Artists</h2>
-        <Swiper children={artists} />
-      </div>
+    <div className="recommendations-page">
+      <h1>Recommendations</h1>
+      <h2>Conventional Novels</h2>
+      <Swiper children={books} />
+      <h2>Graphic Novels</h2>
+      <Swiper children={graphicNovels} />
+      <h2>Video Games</h2>
+      <Swiper children={games} />
+      <h2>Artists</h2>
+      <Swiper children={artists} />
     </div>
   );
 }

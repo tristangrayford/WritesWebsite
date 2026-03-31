@@ -1,5 +1,4 @@
 import { ChangeEvent, useState } from "react";
-import HeaderMenu from "../Menu/HeaderMenu";
 import { LineChart, Line, CartesianGrid, XAxis, YAxis } from "recharts";
 import classNames from "classnames";
 import { GetUserDataService } from "../../services/GetUserDataService";
@@ -29,12 +28,12 @@ function EdNoWriMo() {
   const getUserDataService = new GetUserDataService();
   const userData = getUserDataService.getUserData();
   const latestProject = userData.projects.sort(
-    (a, b) => a.endDate.getDate() - b.endDate.getDate()
+    (a, b) => a.endDate.getDate() - b.endDate.getDate(),
   )[0];
   const [selectedProject, setSelectedProject] = useState(latestProject);
   const currentDay = dateDifferenceInDays(
     selectedProject.startDate,
-    new Date()
+    new Date(),
   );
   const [dailyInput, setDailyInput] = useState(selectedProject.dailyInputs);
   const [target, setTarget] = useState(selectedProject.target);
@@ -72,139 +71,136 @@ function EdNoWriMo() {
   };
 
   return (
-    <div className="App">
-      <HeaderMenu />
-      <div className="endowrimo-page">
-        <div>
-          <h2>{selectedProject.name}</h2>
-          <button
-            hidden={userData.projects.length < 2}
-            onClick={() => setProjectSelectorOpen(true)}
-          >
-            Change Project
-          </button>
-        </div>
-        <div className="stats">
-          <div className="stat-block">
-            <p>My goal:</p>
-            <p className="score-percent">{target.toLocaleString()}</p>
-            <p className="score-percent-plus">words</p>
-          </div>
-          <div className="stat-block">
-            <p>My current streak:</p>
-            <p className="score">{selectedProject.currentStreak} days</p>
-          </div>
-          <div className="stat-block">
-            <p>My top streak:</p>
-            <p className="score">{selectedProject.maxStreak} days</p>
-          </div>
-          <div className="stat-block">
-            <p>Most daily words:</p>
-            <p className="score">
-              {selectedProject.maxWordsDaily.toLocaleString()}
-            </p>
-          </div>
-          <div className="stat-block">
-            <p>My current word count:</p>
-            <p className="score">{selectedProject.maxWords.toLocaleString()}</p>
-          </div>
-          <div className="stat-block">
-            <p>I am:</p>
-            <p className="score-percent">
-              {Math.round((selectedProject.maxWords / target) * 100)}%
-            </p>
-            <p className="score-percent-plus">of the way there!</p>
-          </div>
-        </div>
-        <LineChart width={900} height={450} data={data}>
-          <XAxis dataKey="name" interval={0} tickLine={false} />
-          <YAxis tickCount={6} />
-          <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
-          <Line type="monotone" dataKey="Target" stroke="#8884d8" />
-          <Line type="monotone" dataKey="Actual" stroke="#82ca9d" />
-          <Line
-            type="monotone"
-            dataKey="Projection"
-            stroke="#82ca9d50"
-            strokeDasharray={11}
-            dot={false}
-          />
-        </LineChart>
-        <div>
-          <h3>Your Target</h3>
-          <input type="number" placeholder="20000" onChange={updateTarget} />
-        </div>
-        <div className="progress">
-          <h3 className="progress-header">Your Progress</h3>
-          {dailyInput.map((element: number | null, index: number) => {
-            if (index > 0) {
-              return (
-                <div
-                  key={index}
-                  className={classNames(
-                    "day-input",
-                    currentDay === index ? "today" : "",
-                    index < currentDay ? "past" : ""
-                  )}
-                >
-                  <h4>Day {index}</h4>
-                  <input
-                    type="number"
-                    placeholder={(element ?? "").toString()}
-                    disabled={currentDay < index || currentDay > index}
-                    onChange={(event) =>
-                      updateProgress(index, event.target.valueAsNumber)
-                    }
-                  />
-                </div>
-              );
-            } else return null;
-          })}
-        </div>
-        <div className="awards">
-          <h3>Your Awards</h3>
-          {selectedProject.maxWords > 0 && (
-            <img alt="first words" src={firstwords} />
-          )}
-          {selectedProject.maxStreak > 3 && (
-            <img alt="three streak" src={threeStreak} />
-          )}
-          {selectedProject.maxStreak > 5 && (
-            <img alt="five streak" src={fiveStreak} />
-          )}
-          {selectedProject.maxStreak > 15 && (
-            <img alt="fifteen streak" src={fifteenStreak} />
-          )}
-          {selectedProject.maxStreak > 29 && (
-            <img alt="full streak" src={fullStreak} />
-          )}
-          {selectedProject.maxWords > 5000 && (
-            <img alt="5k words written" src={fivekwords} />
-          )}
-          {selectedProject.maxWords > 10000 && (
-            <img alt="10k words written" src={tenkwords} />
-          )}
-          {selectedProject.maxWords > 25000 && (
-            <img alt="25k words written" src={twentyfivekwords} />
-          )}
-          {selectedProject.maxWords > 49000 && (
-            <img alt="50k words written" src={fiftykwords} />
-          )}
-        </div>
-        <div
-          className={classNames(
-            "project-selector",
-            projectSelectorOpen ? "selector-open" : ""
-          )}
+    <div className="endowrimo-page">
+      <div>
+        <h2>{selectedProject.name}</h2>
+        <button
+          hidden={userData.projects.length < 2}
+          onClick={() => setProjectSelectorOpen(true)}
         >
-          <Select
-            className="select-dropdown"
-            options={userData.projects}
-            onChange={(value) => updateProject(value ?? latestProject)}
-            getOptionLabel={(value) => value.name}
-          ></Select>
-          <button onClick={() => setProjectSelectorOpen(false)}>x</button>
+          Change Project
+        </button>
+      </div>
+      <div className="stats">
+        <div className="stat-block">
+          <p>My goal:</p>
+          <p className="score-percent">{target.toLocaleString()}</p>
+          <p className="score-percent-plus">words</p>
         </div>
+        <div className="stat-block">
+          <p>My current streak:</p>
+          <p className="score">{selectedProject.currentStreak} days</p>
+        </div>
+        <div className="stat-block">
+          <p>My top streak:</p>
+          <p className="score">{selectedProject.maxStreak} days</p>
+        </div>
+        <div className="stat-block">
+          <p>Most daily words:</p>
+          <p className="score">
+            {selectedProject.maxWordsDaily.toLocaleString()}
+          </p>
+        </div>
+        <div className="stat-block">
+          <p>My current word count:</p>
+          <p className="score">{selectedProject.maxWords.toLocaleString()}</p>
+        </div>
+        <div className="stat-block">
+          <p>I am:</p>
+          <p className="score-percent">
+            {Math.round((selectedProject.maxWords / target) * 100)}%
+          </p>
+          <p className="score-percent-plus">of the way there!</p>
+        </div>
+      </div>
+      <LineChart width={900} height={450} data={data}>
+        <XAxis dataKey="name" interval={0} tickLine={false} />
+        <YAxis tickCount={6} />
+        <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
+        <Line type="monotone" dataKey="Target" stroke="#8884d8" />
+        <Line type="monotone" dataKey="Actual" stroke="#82ca9d" />
+        <Line
+          type="monotone"
+          dataKey="Projection"
+          stroke="#82ca9d50"
+          strokeDasharray={11}
+          dot={false}
+        />
+      </LineChart>
+      <div>
+        <h3>Your Target</h3>
+        <input type="number" placeholder="20000" onChange={updateTarget} />
+      </div>
+      <div className="progress">
+        <h3 className="progress-header">Your Progress</h3>
+        {dailyInput.map((element: number | null, index: number) => {
+          if (index > 0) {
+            return (
+              <div
+                key={index}
+                className={classNames(
+                  "day-input",
+                  currentDay === index ? "today" : "",
+                  index < currentDay ? "past" : "",
+                )}
+              >
+                <h4>Day {index}</h4>
+                <input
+                  type="number"
+                  placeholder={(element ?? "").toString()}
+                  disabled={currentDay < index || currentDay > index}
+                  onChange={(event) =>
+                    updateProgress(index, event.target.valueAsNumber)
+                  }
+                />
+              </div>
+            );
+          } else return null;
+        })}
+      </div>
+      <div className="awards">
+        <h3>Your Awards</h3>
+        {selectedProject.maxWords > 0 && (
+          <img alt="first words" src={firstwords} />
+        )}
+        {selectedProject.maxStreak > 3 && (
+          <img alt="three streak" src={threeStreak} />
+        )}
+        {selectedProject.maxStreak > 5 && (
+          <img alt="five streak" src={fiveStreak} />
+        )}
+        {selectedProject.maxStreak > 15 && (
+          <img alt="fifteen streak" src={fifteenStreak} />
+        )}
+        {selectedProject.maxStreak > 29 && (
+          <img alt="full streak" src={fullStreak} />
+        )}
+        {selectedProject.maxWords > 5000 && (
+          <img alt="5k words written" src={fivekwords} />
+        )}
+        {selectedProject.maxWords > 10000 && (
+          <img alt="10k words written" src={tenkwords} />
+        )}
+        {selectedProject.maxWords > 25000 && (
+          <img alt="25k words written" src={twentyfivekwords} />
+        )}
+        {selectedProject.maxWords > 49000 && (
+          <img alt="50k words written" src={fiftykwords} />
+        )}
+      </div>
+      <div
+        className={classNames(
+          "project-selector",
+          projectSelectorOpen ? "selector-open" : "",
+        )}
+      >
+        <Select
+          className="select-dropdown"
+          options={userData.projects}
+          onChange={(value) => updateProject(value ?? latestProject)}
+          getOptionLabel={(value) => value.name}
+        ></Select>
+        <button onClick={() => setProjectSelectorOpen(false)}>x</button>
       </div>
     </div>
   );
