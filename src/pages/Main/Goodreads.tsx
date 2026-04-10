@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function GoodreadsWidget() {
+export const GoodreadsWidget = () => {
     return (
         <div className="goodreads">
             <a className="gr_title" style={{fontSize: "1.3em", color: "#382110", textDecoration: "none"}} href="https://www.goodreads.com/author/show/20606471.Tristan_Gray?utm_medium=api&utm_source=author_widget">
@@ -100,6 +100,4 @@ function GoodreadsWidget() {
             </div>
         </div>
     )
-}
-
-export default GoodreadsWidget;
+};

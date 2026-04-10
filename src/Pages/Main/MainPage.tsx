@@ -1,8 +1,8 @@
 import { useState } from "react";
-import BuyModal from "../BuyModal/BuyModal";
+import { BuyModal } from "../BuyModal/BuyModal";
 import BuyLinksUK from "../../dtos/BuyLinksUK";
 import BuyLinksUS from "../../dtos/BuyLinksUS";
-import GoodreadsWidget from "./GoodreadsWidget";
+import { GoodreadsWidget } from "./GoodreadsWidget";
 import whispers from "../../images/book-covers/small/Whispers.png";
 import blackwing from "../../images/book-covers/small/Blackwing.png";
 import kickstarter from "../../images/KickStarter Lead Wide.png";
@@ -46,7 +46,7 @@ const fullDesc = (
   </p>
 );
 
-function MainPage() {
+export const MainPage = () => {
   const [selected] = useState(false);
   const [mapClicked, setMapClicked] = useState(false);
 
@@ -120,6 +120,4 @@ function MainPage() {
       <GoodreadsWidget />
     </div>
   );
-}
-
-export default MainPage;
+};

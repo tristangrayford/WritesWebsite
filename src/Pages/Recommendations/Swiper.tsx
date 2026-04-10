@@ -10,7 +10,7 @@ interface SwiperState {
   indexSelected: number;
 }
 
-class Swiper extends React.Component<SwiperProps, SwiperState> {
+export class Swiper extends React.Component<SwiperProps, SwiperState> {
   public constructor(props: SwiperProps) {
     super(props);
 
@@ -97,4 +97,3 @@ class Swiper extends React.Component<SwiperProps, SwiperState> {
   }
 }
 
-export default Swiper;

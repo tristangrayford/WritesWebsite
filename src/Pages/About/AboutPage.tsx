@@ -1,6 +1,6 @@
 import profile from "../../images/Profile.png";
 
-function AboutPage() {
+export const AboutPage = () => {
   return (
     <div className="about-page">
       <div className="half">
@@ -33,6 +33,4 @@ function AboutPage() {
       </div>
     </div>
   );
-}
-
-export default AboutPage;
+};

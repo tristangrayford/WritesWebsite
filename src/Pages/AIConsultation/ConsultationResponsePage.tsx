@@ -1,4 +1,4 @@
-function BlogPage() {
+export const ConsultationResponsePage = () => {
   return (
     <div className="blog-page">
       <h1>
@@ -390,6 +390,4 @@ function BlogPage() {
       </div>
     </div>
   );
-}
-
-export default BlogPage;
+};

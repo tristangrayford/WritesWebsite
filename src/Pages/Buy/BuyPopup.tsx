@@ -36,7 +36,7 @@ interface BuyPopupState {
   bookSelected: Book;
 }
 
-class BuyPopup extends React.Component<BuyPopupProps, BuyPopupState> {
+export class BuyPopup extends React.Component<BuyPopupProps, BuyPopupState> {
   public constructor(props: BuyPopupProps) {
     super(props);
     this.onClose = this.onClose.bind(this);
@@ -317,4 +317,3 @@ class BuyPopup extends React.Component<BuyPopupProps, BuyPopupState> {
   }
 }
 
-export default BuyPopup;

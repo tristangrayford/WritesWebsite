@@ -1,4 +1,4 @@
-import Swiper from "./Swiper";
+import { Swiper } from "./Swiper";
 import dragonbone from "../../images/recommendations/Dragonbone Chair.jpg";
 import magician from "../../images/recommendations/Magician.jpg";
 import nightwatch from "../../images/recommendations/Night Watch.jpg";
@@ -38,7 +38,7 @@ import anato from "../../images/recommendations/Anato Finnstark.png";
 import syd from "../../images/recommendations/Syd Mills.png";
 import bastien from "../../images/recommendations/Bastien.png";
 
-function RecommendationsPage() {
+export const RecommendationsPage = () => {
   const books = [
     <div key="dragonbone">
       <img src={dragonbone} alt="The Dragonbone Chair" />
@@ -169,6 +169,4 @@ function RecommendationsPage() {
       <Swiper children={artists} />
     </div>
   );
-}
-
-export default RecommendationsPage;
+};

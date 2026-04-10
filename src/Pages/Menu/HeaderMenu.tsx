@@ -13,7 +13,7 @@ interface MenuState {
   menuShown: boolean;
 }
 
-class HeaderMenu extends React.Component<{}, MenuState> {
+export class HeaderMenu extends React.Component<{}, MenuState> {
   public constructor(props: {}) {
     super(props);
     this.state = { menuShown: false };
@@ -98,4 +98,3 @@ class HeaderMenu extends React.Component<{}, MenuState> {
   }
 }
 
-export default HeaderMenu;

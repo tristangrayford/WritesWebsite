@@ -1,6 +1,6 @@
 import arrow from "../../images/Arrow.png";
 
-function BlogPage() {
+export const BlogPage = () => {
   return (
     <div className="blog-page">
       <div className="half">
@@ -16,6 +16,4 @@ function BlogPage() {
       </div>
     </div>
   );
-}
-
-export default BlogPage;
+};

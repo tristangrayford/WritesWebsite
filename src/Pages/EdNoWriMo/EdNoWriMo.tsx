@@ -23,7 +23,7 @@ const dateDifferenceInDays = (a: Date, b: Date): number => {
   return Math.floor((utc2 - utc1) / _MS_PER_DAY);
 };
 
-function EdNoWriMo() {
+export const EdNoWriMo = () => {
   const [projectSelectorOpen, setProjectSelectorOpen] = useState(false);
   const getUserDataService = new GetUserDataService();
   const userData = getUserDataService.getUserData();
@@ -204,6 +204,4 @@ function EdNoWriMo() {
       </div>
     </div>
   );
-}
-
-export default EdNoWriMo;
+};

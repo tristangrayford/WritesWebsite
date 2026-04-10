@@ -1,4 +1,4 @@
-function GoodreadsWidget() {
+export const GoodreadsWidget = () => {
   return (
     <div className="goodreads">
       <a
@@ -96,6 +96,4 @@ function GoodreadsWidget() {
       </div>
     </div>
   );
-}
-
-export default GoodreadsWidget;
+};

@@ -1,4 +1,4 @@
-function LanguagePage() {
+export const LanguagePage = () => {
   return (
     <div className="language-page">
       <h1>Pronounciation and Language Guide</h1>
@@ -277,6 +277,4 @@ function LanguagePage() {
       </p>
     </div>
   );
-}
-
-export default LanguagePage;
+};

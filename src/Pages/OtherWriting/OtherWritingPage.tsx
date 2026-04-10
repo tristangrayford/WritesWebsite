@@ -1,4 +1,4 @@
-function OtherWritingPage() {
+export const OtherWritingPage = () => {
   return (
     <div className="language-page">
       <h1>Other Writing</h1>
@@ -39,6 +39,4 @@ function OtherWritingPage() {
       </div>
     </div>
   );
-}
-
-export default OtherWritingPage;
+};

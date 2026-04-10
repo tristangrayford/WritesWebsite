@@ -1,4 +1,4 @@
-function PaymentCompletePage() {
+export const PaymentCompletePage = () => {
   return (
     <div>
       <h1>Payment Complete</h1>
@@ -9,6 +9,4 @@ function PaymentCompletePage() {
       </p>
     </div>
   );
-}
-
-export default PaymentCompletePage;
+};

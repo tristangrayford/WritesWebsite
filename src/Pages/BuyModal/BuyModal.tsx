@@ -2,7 +2,7 @@ import React, { JSX } from "react";
 
 import whispers from "../../images/book-covers/small/Whispers.png";
 
-class BuyModal extends React.Component {
+export class BuyModal extends React.Component {
   public render(): JSX.Element {
     return (
       <a href="https://ko-fi.com/tristangray/shop" className="buy-modal">
@@ -14,4 +14,3 @@ class BuyModal extends React.Component {
   }
 }
 
-export default BuyModal;
