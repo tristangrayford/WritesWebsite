@@ -84,7 +84,7 @@
     },
     "scripts": {
         "predeploy": "npm run build",
-        "deploy": "npx wrangler pages deploy docs",
+        "deploy": "npx wrangler deploy",
         "start": "vite",
         "build": "tsc && vite build",
         "serve": "vite preview"
