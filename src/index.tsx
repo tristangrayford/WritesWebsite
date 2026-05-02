@@ -7,7 +7,6 @@ import { LanguagePage } from "./pages/Language/LanguagePage";
 import { RecommendationsPage } from "./pages/Recommendations/RecommendationsPage";
 import { OtherWritingPage } from "./pages/OtherWriting/OtherWritingPage";
 import { BlogPage } from "./pages/Blog/BlogPage";
-import { PaymentCompletePage } from "./pages/Payment Complete/PaymentComplete";
 import { EdNoWriMo } from "./pages/EdNoWriMo/EdNoWriMo";
 import { ReaderDisplay } from "./pages/Reader/ReaderDisplay";
 import { ConsultationResponsePage } from "./pages/AIConsultation/ConsultationResponsePage";
@@ -27,7 +26,6 @@ const routing = (
         <Route path="/Languages" element={<LanguagePage />} />
         <Route path="/Recommendations" element={<RecommendationsPage />} />
         <Route path="/Writing" element={<OtherWritingPage />} />
-        <Route path="/Payment" element={<PaymentCompletePage />} />
         <Route path="/EdNoWriMo" element={<EdNoWriMo />} />
         <Route path="/Reader" element={<ReaderDisplay />} />
         <Route path="/AIConsultation" element={<ConsultationResponsePage />} />
