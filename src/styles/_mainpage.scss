@@ -28,14 +28,13 @@
       display: block;
       max-width: 900px;
       margin: 0 auto;
-      overflow: hidden;
       border-radius: 6px;
+      overflow: hidden;
 
       img {
         display: block;
         width: 100%;
-        object-fit: cover;
-        object-position: 30% center;
+        height: auto;
       }
     }
 
@@ -238,12 +237,6 @@
   @media (max-width: 570px) {
     .series-title {
       .kickstarter-banner {
-        max-height: 90px;
-
-        img {
-          height: 90px;
-        }
-
         .just-funded {
           width: 90px;
           font-size: 1em;

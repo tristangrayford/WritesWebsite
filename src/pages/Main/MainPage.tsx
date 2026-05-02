@@ -80,8 +80,7 @@ export const MainPage = () => {
       <div className="books">
         <div className="row video-row">
           <div className="video-container">
-            <h2>A reading from Call of the Black Wing</h2>
-            <h3>Reader: Mhairi Bryce</h3>
+            <h3>A reading from Call of the Black Wing by Mhairi Bryce</h3>
             <video
               className="embed-video"
               src={CallVideo}

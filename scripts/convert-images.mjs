@@ -21,7 +21,7 @@ const args = Object.fromEntries(
   process.argv.slice(2).map((a) => {
     const [k, v] = a.replace(/^--/, "").split("=");
     return [k, v ?? true];
-  })
+  }),
 );
 
 const MAX_WIDTH = Number(args["max-width"] ?? 1400);
@@ -63,7 +63,10 @@ for await (const file of walk(ROOT)) {
   try {
     const image = sharp(file);
     const meta = await image.metadata();
-    const pipeline = (meta.width ?? 0) > MAX_WIDTH ? image.resize({ width: MAX_WIDTH }) : image;
+    const pipeline =
+      (meta.width ?? 0) > MAX_WIDTH
+        ? image.resize({ width: MAX_WIDTH })
+        : image;
     await pipeline.webp({ quality: QUALITY }).toFile(out);
     const outKb = (await stat(out)).size / 1024;
     totalIn += sizeKb;
@@ -73,7 +76,7 @@ for await (const file of walk(ROOT)) {
       `  ${rel}  ${sizeKb.toFixed(0)}KB -> ${outKb.toFixed(0)}KB  (${(
         (1 - outKb / sizeKb) *
         100
-      ).toFixed(0)}% smaller)`
+      ).toFixed(0)}% smaller)`,
     );
   } catch (err) {
     console.error(`! Failed: ${rel}`, err.message);
@@ -83,9 +86,9 @@ for await (const file of walk(ROOT)) {
 console.log(`\nConverted ${converted} files, skipped ${skipped} small ones.`);
 console.log(
   `Total: ${(totalIn / 1024).toFixed(1)}MB -> ${(totalOut / 1024).toFixed(
-    1
-  )}MB  (${((1 - totalOut / totalIn) * 100).toFixed(0)}% reduction)`
+    1,
+  )}MB  (${((1 - totalOut / totalIn) * 100).toFixed(0)}% reduction)`,
 );
 console.log(
-  "\nNext: update imports in src/ from .png/.jpg to .webp, then delete the original files."
+  "\nNext: update imports in src/ from .png/.jpg to .webp, then delete the original files.",
 );
