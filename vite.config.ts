@@ -5,9 +5,9 @@ import svgr from 'vite-plugin-svgr';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: './',              // ensure relative paths, e.g. in index.html
+  base: '/',               // absolute paths for SPA routing on Cloudflare Pages
   build: {
-    outDir: 'docs',      // gets deployed to github pages
+    outDir: 'docs',      // build output deployed to Cloudflare Pages
     assetsDir: 'assets', // static assets (images, js, css, etc.)
   },
   plugins: [

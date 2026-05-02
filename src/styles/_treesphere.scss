@@ -1,0 +1,90 @@
+@use "params";
+
+.treesphere-page {
+  padding: 50px 20px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: params.$mainfontcolor;
+
+  .hero {
+    margin-bottom: 60px;
+
+    .suite-logo {
+      width: 160px;
+      max-width: 40vw;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .highlights {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 10px 24px;
+      justify-content: center;
+
+      li::before {
+        content: "• ";
+      }
+    }
+  }
+
+  .apps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+
+    .app {
+      flex: 1 1 360px;
+      max-width: 480px;
+      padding: 30px 25px;
+      background-color: rgba(255, 255, 255, 0.04);
+      border-radius: 12px;
+      text-align: left;
+
+      .app-logo {
+        width: 96px;
+        height: auto;
+        display: block;
+        margin: 0 auto 15px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-top: 0;
+
+        a {
+          color: params.$mainfontcolor;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      ul {
+        padding-left: 20px;
+
+        li {
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}

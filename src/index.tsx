@@ -14,6 +14,7 @@ import { ConsultationResponsePage } from "./pages/AIConsultation/ConsultationRes
 import { createRoot } from "react-dom/client";
 import { HeaderMenu } from "./pages/Menu/HeaderMenu";
 import { PrivacyPage } from "./pages/TreeReader/PrivacyPage";
+import { TreeSpherePage } from "./pages/TreeSphere/TreeSpherePage";
 
 const routing = (
   <HashRouter>
@@ -32,6 +33,7 @@ const routing = (
         <Route path="/AIConsultation" element={<ConsultationResponsePage />} />
         <Route path="/Privacy" element={<PrivacyPage />} />
         <Route path="/PrivacyPolicy" element={<PrivacyPage />} />
+        <Route path="/TreeSphere" element={<TreeSpherePage />} />
         <Route path="*" element={<MainPage />} />
       </Routes>
     </div>

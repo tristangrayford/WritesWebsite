@@ -47,6 +47,7 @@ export class HeaderMenu extends React.Component<{}, MenuState> {
           <NavLink to="/Languages">Language</NavLink>
           <NavLink to="/Recommendations">Recommendations</NavLink>
           <NavLink to="/AIConsultation">AI Consultation</NavLink>
+          <NavLink to="/TreeSphere">TreeSphere Apps</NavLink>
         </div>
         <div className="social">
           <a
