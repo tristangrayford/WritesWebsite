@@ -1,42 +1,42 @@
 import { Swiper } from "./Swiper";
-import dragonbone from "../../images/recommendations/Dragonbone Chair.jpg";
+import dragonbone from "../../images/recommendations/Dragonbone Chair.webp";
 import magician from "../../images/recommendations/Magician.jpg";
-import nightwatch from "../../images/recommendations/Night Watch.jpg";
-import fifthseason from "../../images/recommendations/Fifth Season.jpg";
-import bonewitch from "../../images/recommendations/Bone Witch.jpg";
+import nightwatch from "../../images/recommendations/Night Watch.webp";
+import fifthseason from "../../images/recommendations/Fifth Season.webp";
+import bonewitch from "../../images/recommendations/Bone Witch.webp";
 import daughter from "../../images/recommendations/Daughter of the Empire.jpg";
-import lastwish from "../../images/recommendations/The Last Wish.jpg";
+import lastwish from "../../images/recommendations/The Last Wish.webp";
 import gideon from "../../images/recommendations/Gideon.jpg";
 import priory from "../../images/recommendations/Priory.jpg";
-import hades from "../../images/recommendations/Hades.jpeg";
+import hades from "../../images/recommendations/Hades.webp";
 
-import monstress from "../../images/recommendations/Monstress.jpg";
+import monstress from "../../images/recommendations/Monstress.webp";
 import die from "../../images/recommendations/DIE.jpg";
-import highesthouse from "../../images/recommendations/Highest House.jpg";
-import coda from "../../images/recommendations/CODA.jpg";
+import highesthouse from "../../images/recommendations/Highest House.webp";
+import coda from "../../images/recommendations/CODA.webp";
 import isola from "../../images/recommendations/Isola.jpg";
-import sandman from "../../images/recommendations/Sandman.jpg";
-import reaver from "../../images/recommendations/Reaver.jpg";
-import ratqueens from "../../images/recommendations/Rat Queens.jpg";
+import sandman from "../../images/recommendations/Sandman.webp";
+import reaver from "../../images/recommendations/Reaver.webp";
+import ratqueens from "../../images/recommendations/Rat Queens.webp";
 
-import horizon from "../../images/recommendations/Horizon.jpg";
-import journey from "../../images/recommendations/Journey.jpg";
-import hollow from "../../images/recommendations/Hollow Knight.png";
-import witcher from "../../images/recommendations/Witcher 3.jpg";
-import godofwar from "../../images/recommendations/God of War.jpg";
-import hellblade from "../../images/recommendations/Hellblade.jpg";
-import ori from "../../images/recommendations/Ori.jpg";
-import jedi from "../../images/recommendations/Jedi Fallen Order.jpg";
-import control from "../../images/recommendations/Control.jpg";
-import shadowofwar from "../../images/recommendations/Shadow of War.jpg";
-import celeste from "../../images/recommendations/Celeste.png";
-import hallOfSmoke from "../../images/recommendations/Hall of Smoke.jpg";
+import horizon from "../../images/recommendations/Horizon.webp";
+import journey from "../../images/recommendations/Journey.webp";
+import hollow from "../../images/recommendations/Hollow Knight.webp";
+import witcher from "../../images/recommendations/Witcher 3.webp";
+import godofwar from "../../images/recommendations/God of War.webp";
+import hellblade from "../../images/recommendations/Hellblade.webp";
+import ori from "../../images/recommendations/Ori.webp";
+import jedi from "../../images/recommendations/Jedi Fallen Order.webp";
+import control from "../../images/recommendations/Control.webp";
+import shadowofwar from "../../images/recommendations/Shadow of War.webp";
+import celeste from "../../images/recommendations/Celeste.webp";
+import hallOfSmoke from "../../images/recommendations/Hall of Smoke.webp";
 
-import alanlee from "../../images/recommendations/Alan Lee.png";
-import almg from "../../images/recommendations/ALMG.png";
-import anato from "../../images/recommendations/Anato Finnstark.png";
-import syd from "../../images/recommendations/Syd Mills.png";
-import bastien from "../../images/recommendations/Bastien.png";
+import alanlee from "../../images/recommendations/Alan Lee.webp";
+import almg from "../../images/recommendations/ALMG.webp";
+import anato from "../../images/recommendations/Anato Finnstark.webp";
+import syd from "../../images/recommendations/Syd Mills.webp";
+import bastien from "../../images/recommendations/Bastien.webp";
 
 export const RecommendationsPage = () => {
   const books = [

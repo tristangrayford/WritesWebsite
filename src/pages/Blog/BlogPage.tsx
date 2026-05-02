@@ -1,4 +1,4 @@
-import arrow from "../../images/Arrow.png";
+import arrow from "../../images/Arrow.webp";
 
 interface BlogPost {
   title: string;

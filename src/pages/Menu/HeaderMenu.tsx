@@ -1,13 +1,16 @@
 import React, { JSX } from "react";
 import { NavLink } from "react-router-dom";
-import Facebook from "../../images/logos/Facebook.png";
-import Instagram from "../../images/logos/Instagram.png";
-import Goodreads from "../../images/logos/Goodreads.png";
-import Tiktok from "../../images/logos/Tiktok.png";
-import Bluesky from "../../images/logos/Bluesky.png";
 import menu from "../../images/Menu.webp";
+import {
+  BlueskyIcon,
+  EmailIcon,
+  FacebookIcon,
+  GoodreadsIcon,
+  InstagramIcon,
+  TiktokIcon,
+} from "./SocialIcons";
 
-import logo from "../../images/TG Transparent Background.png";
+import logo from "../../images/TG Transparent Background.webp";
 
 interface MenuState {
   menuShown: boolean;
@@ -52,44 +55,49 @@ export class HeaderMenu extends React.Component<{}, MenuState> {
             target="_blank"
             rel="noreferrer"
             href="https://www.facebook.com/tgraywrites"
+            aria-label="Facebook"
           >
-            <img src={Facebook} alt="Facebook" />
+            <FacebookIcon className="social-icon" />
           </a>
           <a
-            className="instagram"
             target="_blank"
             rel="noreferrer"
             href="https://www.instagram.com/tgraywrites"
+            aria-label="Instagram"
           >
-            <img src={Instagram} alt="Instagram" />
+            <InstagramIcon className="social-icon" />
           </a>
           <a
             target="_blank"
             rel="noreferrer"
             href="https://bsky.app/profile/eidyngray.scot"
+            aria-label="Bluesky"
           >
-            <img src={Bluesky} alt="Bluesky" />
+            <BlueskyIcon className="social-icon" />
           </a>
           <a
             target="_blank"
             rel="noreferrer"
             href="https://www.tiktok.com/@tgraywrites"
+            aria-label="TikTok"
           >
-            <img src={Tiktok} alt="Tiktok" />
+            <TiktokIcon className="social-icon" />
           </a>
           <a
             target="_blank"
             rel="noreferrer"
             href="https://www.goodreads.com/author/show/20606471.Tristan_Gray"
+            aria-label="Goodreads"
           >
-            <img src={Goodreads} alt="Goodreads" />
+            <GoodreadsIcon className="social-icon" />
           </a>
           <a
             target="_blank"
             rel="noreferrer"
             href="mailto:tristan@eidyngray.scot?subject=Website Contact"
+            aria-label="Email"
           >
-            <p>@</p>
+            <EmailIcon className="social-icon" />
           </a>
         </div>
       </div>

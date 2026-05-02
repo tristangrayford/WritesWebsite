@@ -78,7 +78,10 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
+    "sharp": "^0.34.5",
+    "svgo": "^4.0.1",
     "vite": "^6.2.0",
+    "vite-plugin-image-optimizer": "^2.0.3",
     "vite-plugin-svgr": "^4.3.0",
     "vite-tsconfig-paths": "^5.1.4"
   },
@@ -87,7 +90,8 @@
     "deploy": "npx wrangler deploy",
     "start": "vite",
     "build": "tsc && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "convert-images": "node scripts/convert-images.mjs"
   },
   "eslintConfig": {
     "extends": [

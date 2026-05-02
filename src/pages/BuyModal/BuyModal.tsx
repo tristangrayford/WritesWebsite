@@ -1,6 +1,6 @@
 import React, { JSX } from "react";
 
-import whispers from "../../images/book-covers/small/Whispers.png";
+import whispers from "../../images/book-covers/small/Whispers.webp";
 
 export class BuyModal extends React.Component {
   public render(): JSX.Element {

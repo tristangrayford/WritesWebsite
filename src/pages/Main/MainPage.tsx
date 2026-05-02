@@ -2,12 +2,12 @@ import { useState } from "react";
 import BuyLinksUK from "../../dtos/BuyLinksUK";
 import BuyLinksUS from "../../dtos/BuyLinksUS";
 import { GoodreadsWidget } from "./GoodreadsWidget";
-import whispers from "../../images/book-covers/small/Whispers.png";
-import blackwing from "../../images/book-covers/small/Blackwing.png";
-import kickstarter from "../../images/KickStarter Lead Wide.png";
-import map from "../../images/Seann Aite.png";
+import whispers from "../../images/book-covers/small/Whispers.webp";
+import blackwing from "../../images/book-covers/small/Blackwing.webp";
+import kickstarter from "../../images/KickStarter Lead Wide.webp";
+import map from "../../images/Seann Aite.webp";
 import characters from "../../images/Fiadh and Annis.png";
-import arrow from "../../images/Arrow.png";
+import arrow from "../../images/Arrow.webp";
 import { BookItem } from "./BookItem";
 import CallVideo from "../../videos/Call of the Black Wing Intro From Mhairi Bryce.mp4";
 

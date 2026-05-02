@@ -39,29 +39,23 @@
 
         a {
             float: right;
-            margin-left: 5px;
-            width: 15px;
-            height: 15px;
+            margin-left: 8px;
+            width: 18px;
+            height: 18px;
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.2s ease;
 
-            img {
-                width: 15px;
+            &:hover {
+                opacity: 0.7;
             }
 
-            p {
-                margin: 0;
-                color: #ddddff;
-                background-color: #4444ff;
-                border-radius: 2px;
-                font-weight: 900;
-                font-size: 13px;
-            }
-        }
-
-        .instagram {
-            img {
-                margin-left: -5px;
-                height:15px;
-                width:30px;
+            .social-icon {
+                width: 18px;
+                height: 18px;
+                display: block;
             }
         }
     }
