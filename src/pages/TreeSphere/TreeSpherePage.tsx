@@ -23,41 +23,43 @@ export const TreeSpherePage = () => {
       </div>
 
       <div className="apps">
-        <div className="app">
+        <a
+          className="app"
+          href="https://TreeScript.app"
+          target="_blank"
+          rel="noreferrer"
+        >
           <img
             className="app-logo"
             src={TreeScriptLogo}
             alt="TreeScript logo"
           />
-          <h2>
-            <a href="https://TreeScript.app" target="_blank" rel="noreferrer">
-              TreeScript.app
-            </a>
-          </h2>
+          <h2>TreeScript.app</h2>
           <ul>
             <li>Writing tracking app</li>
             <li>Goals tracking and visualisation</li>
             <li>Friends connections</li>
           </ul>
-        </div>
+        </a>
 
-        <div className="app">
+        <a
+          className="app"
+          href="https://TreeReader.app"
+          target="_blank"
+          rel="noreferrer"
+        >
           <img
             className="app-logo"
             src={TreeReaderLogo}
             alt="TreeReader logo"
           />
-          <h2>
-            <a href="https://TreeReader.app" target="_blank" rel="noreferrer">
-              TreeReader.app
-            </a>
-          </h2>
+          <h2>TreeReader.app</h2>
           <ul>
             <li>eReader</li>
             <li>Lightweight, full featured app with focus on readability</li>
             <li>Public Domain works access</li>
           </ul>
-        </div>
+        </a>
       </div>
 
       <div className="community">
