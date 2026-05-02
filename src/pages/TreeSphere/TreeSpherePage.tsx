@@ -59,6 +59,22 @@ export const TreeSpherePage = () => {
           </ul>
         </div>
       </div>
+
+      <div className="community">
+        <h2>Join the Community</h2>
+        <p>
+          Chat with the developer, request features, report bugs, and connect
+          with other writers and readers using TreeSphere apps.
+        </p>
+        <a
+          className="discord-link"
+          href="https://discord.gg/cQufWa2N"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Join the TreeSphere Discord
+        </a>
+      </div>
     </div>
   );
 };
