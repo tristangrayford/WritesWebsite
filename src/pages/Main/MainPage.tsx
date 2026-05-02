@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { BuyModal } from "../BuyModal/BuyModal";
 import BuyLinksUK from "../../dtos/BuyLinksUK";
 import BuyLinksUS from "../../dtos/BuyLinksUS";
 import { GoodreadsWidget } from "./GoodreadsWidget";
@@ -7,6 +6,7 @@ import whispers from "../../images/book-covers/small/Whispers.png";
 import blackwing from "../../images/book-covers/small/Blackwing.png";
 import kickstarter from "../../images/KickStarter Lead Wide.png";
 import map from "../../images/Seann Aite.png";
+import characters from "../../images/Fiadh and Annis.png";
 import arrow from "../../images/Arrow.png";
 import { BookItem } from "./BookItem";
 import CallVideo from "../../videos/Call of the Black Wing Intro From Mhairi Bryce.mp4";
@@ -59,11 +59,11 @@ export const MainPage = () => {
         charSet="utf-8"
         src="https://www.goodreads.com/author/author_widget/20606471.Tristan_Gray?widget_id=1699907161"
       ></script>
-      <BuyModal />
       <div className="series-title">
-        {/* <img src={trees} alt="Tales of the Seann Àite" />
-          <h2>- Tales of the Seann Àite -</h2> */}
-        <a href="https://www.kickstarter.com/projects/tristangray/call-of-the-black-wing-an-audiobook">
+        <a
+          className="kickstarter-banner"
+          href="https://www.kickstarter.com/projects/tristangray/call-of-the-black-wing-an-audiobook"
+        >
           <img
             src={kickstarter}
             alt="Call of the Black Wing Audiobook Kickstarter"
@@ -78,43 +78,70 @@ export const MainPage = () => {
         <img className="arrow arrow-two" src={arrow} alt="Arrow" />
       </div>
       <div className="books">
-        <div className="video-container">
-          <h2>A reading from Call of the Black Wing</h2>
-          <h3>Reader: Mhairi Bryce</h3>
-          <iframe
-            title="Call of the Black Wing Video"
-            className="embed-video"
-            src={CallVideo}
-          ></iframe>
+        <div className="row video-row">
+          <div className="video-container">
+            <h2>A reading from Call of the Black Wing</h2>
+            <h3>Reader: Mhairi Bryce</h3>
+            <video
+              className="embed-video"
+              src={CallVideo}
+              controls
+              preload="metadata"
+            >
+              <track kind="captions" />
+            </video>
+          </div>
         </div>
-        <BookItem
-          bookItemContent={fullDesc}
-          bookItemTitle="Call of the Black Wing"
-          bookItemImage={blackwing}
-          bookItemLinksUK={BuyLinksUK["Call"]}
-          bookItemLinksUS={BuyLinksUS["Call"]}
-        />
-        <BookItem
-          bookItemContent={whispersDesc}
-          bookItemTitle="Whispers To A Crow"
-          bookItemImage={whispers}
-          bookItemLinksUK={BuyLinksUK["Whispers"]}
-          bookItemLinksUS={BuyLinksUS["Whispers"]}
-        />
-        <div className="map-container">
-          <h2>Map of Seann Àite</h2>
-          <p>Click to see more</p>
-          <button
-            className={mapClicked ? "map-selected map-section" : "map-section"}
-          >
-            <img
-              alt="map of Seann Àite"
-              src={map}
-              onClick={() => {
-                setMapClicked(!mapClicked);
-              }}
-            />
-          </button>
+
+        <div className="row book-row">
+          <BookItem
+            bookItemContent={fullDesc}
+            bookItemTitle="Call of the Black Wing"
+            bookItemImage={blackwing}
+            bookItemLinksUK={BuyLinksUK["Call"]}
+            bookItemLinksUS={BuyLinksUS["Call"]}
+          />
+          <BookItem
+            bookItemContent={whispersDesc}
+            bookItemTitle="Whispers To A Crow"
+            bookItemImage={whispers}
+            bookItemLinksUK={BuyLinksUK["Whispers"]}
+            bookItemLinksUS={BuyLinksUS["Whispers"]}
+          />
+        </div>
+
+        <div className="row visuals-row">
+          <div className="map-container">
+            <h2>Map of Seann Àite</h2>
+            <button
+              className={
+                mapClicked ? "map-selected map-section" : "map-section"
+              }
+            >
+              <img
+                alt="map of Seann Àite"
+                src={map}
+                onClick={() => {
+                  setMapClicked(!mapClicked);
+                }}
+              />
+            </button>
+            <p className="map-caption">Click to see more</p>
+          </div>
+          <div className="character-art">
+            <h2>Fiadh &amp; Annis</h2>
+            <img alt="Fiadh and Annis character art" src={characters} />
+            <p className="art-credit">
+              Art by{" "}
+              <a
+                href="https://www.cristianaleone.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Cristiana Leone
+              </a>
+            </p>
+          </div>
         </div>
       </div>
       <GoodreadsWidget />

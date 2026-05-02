@@ -1,30 +1,120 @@
 @use "params";
 
 .about-page {
-    padding: 50px;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+  padding: 50px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 
-    .half {
-        width: calc(50% - 40px);
-        display: inline-block;
-        vertical-align: top;
+  .half {
+    width: calc(50% - 40px);
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px;
+    text-align: left;
+
+    p {
+      color: params.$mainfontcolor;
+
+      a {
+        color: lightblue;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    img {
+      width: 75%;
+    }
+
+    @media (max-width: 750px) {
+      width: 100%;
+    }
+  }
+
+  .treesphere-about {
+    margin-top: 40px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+    color: params.$mainfontcolor;
+    text-align: left;
+
+    .treesphere-heading {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 10px;
+
+      .treesphere-logo {
+        width: 60px;
+        height: 60px;
+      }
+
+      h2 {
+        margin: 0;
+        font-family: params.$mainfont;
+      }
+    }
+
+    > p {
+      margin: 0 0 20px;
+    }
+
+    .treesphere-apps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      .treesphere-app {
+        flex: 1 1 280px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
         padding: 20px;
-        text-align: left;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        color: params.$mainfontcolor;
+        text-decoration: none;
+        transition: background 0.2s ease;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.1);
+        }
+
+        img {
+          width: 80px;
+          height: 80px;
+          margin-bottom: 10px;
+        }
+
+        h3 {
+          margin: 0 0 10px;
+          font-family: params.$mainfont;
+        }
 
         p {
-            color: params.$mainfontcolor;
+          margin: 0;
         }
-    
-        img {
-            width: 75%;
-        }
-
-        
-
-@media(max-width: 750px){
-    width: 100%;
-}
+      }
     }
+
+    .treesphere-link {
+      margin-top: 20px;
+      text-align: center;
+
+      a {
+        color: lightblue;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }

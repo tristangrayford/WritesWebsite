@@ -1,4 +1,7 @@
 import profile from "../../images/Profile.png";
+import treeSphereLogo from "../../images/logos/TreeSphere.png";
+import treeScriptLogo from "../../images/logos/TreeScript.png";
+import treeReaderLogo from "../../images/logos/TreeReader.png";
 
 export const AboutPage = () => {
   return (
@@ -25,11 +28,57 @@ export const AboutPage = () => {
         <p>
           Tristan released his debut novel, ‘Call of the Black Wing’ in August
           2024. The local writing community page can be found at{" "}
-          <a href="https://edinburghsff.com/">https://edinburghsff.com/</a>
+          <a href="https://edinburghsff.com/">edinburghsff.com</a>.
         </p>
       </div>
       <div className="half">
         <img alt="Profile" src={profile} />
+      </div>
+      <div className="treesphere-about">
+        <div className="treesphere-heading">
+          <img
+            className="treesphere-logo"
+            src={treeSphereLogo}
+            alt="TreeSphere logo"
+          />
+          <h2>TreeSphere</h2>
+        </div>
+        <p>
+          Alongside his writing, Tristan builds the TreeSphere suite of apps for
+          writers and readers - tools designed to make storytelling and reading
+          richer experiences across web and Android.
+        </p>
+        <div className="treesphere-apps">
+          <a
+            className="treesphere-app"
+            href="https://treescript.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={treeScriptLogo} alt="TreeScript logo" />
+            <h3>TreeScript</h3>
+            <p>
+              A writing app that helps authors plan, draft, and organise their
+              stories.
+            </p>
+          </a>
+          <a
+            className="treesphere-app"
+            href="https://treereader.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={treeReaderLogo} alt="TreeReader logo" />
+            <h3>TreeReader</h3>
+            <p>
+              A reader designed to bring stories to life with a clean, focused
+              reading experience.
+            </p>
+          </a>
+        </div>
+        <p className="treesphere-link">
+          Learn more on the <a href="#/TreeSphere">TreeSphere page</a>.
+        </p>
       </div>
     </div>
   );

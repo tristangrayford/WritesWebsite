@@ -1,243 +1,324 @@
 @use "params";
 
-.main-page{
-    button {
-        background: none;
-        border: none;
+.main-page {
+  max-width: 1500px;
+  margin: 0 auto;
+
+  button {
+    background: none;
+    border: none;
+  }
+
+  .series-title {
+    max-width: 900px;
+    margin: 0 auto;
+
+    img,
+    a {
+      width: 100%;
     }
 
-    .series-title {
-        img, a {
-            width: 100%;
-        }
-
-        a {
-            display: block;
-            height: fit-content;
-        }
-
-        h2 {
-            position: absolute;
-            width: 340px;
-            top: 180px;
-            left: calc(50% - 150px);
-        }
+    a {
+      display: block;
+      height: fit-content;
     }
 
-    .buy-direct {
-        background-color: #222266;
-        padding: 20px;
-        
-        a {
-            font-family: params.$mainfont;
-            color: white;
+    .kickstarter-banner {
+      position: relative;
+      display: block;
+      max-width: 900px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 6px;
+
+      img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        object-position: 30% center;
+      }
+    }
+
+    h2 {
+      position: absolute;
+      width: 340px;
+      top: 180px;
+      left: calc(50% - 150px);
+    }
+  }
+
+  .buy-direct {
+    background-color: #222266;
+    padding: 20px;
+    max-width: 860px;
+    margin: 0 auto;
+
+    a {
+      font-family: params.$mainfont;
+      color: white;
+      text-decoration: none;
+    }
+
+    .arrow {
+      height: 15px;
+      filter: invert(100%);
+    }
+
+    .arrow-one {
+      margin-right: 15px;
+      transform: rotate(90deg);
+    }
+
+    .arrow-two {
+      margin-left: 15px;
+      transform: rotate(-90deg);
+    }
+  }
+
+  .books {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 70px;
+      width: 100%;
+    }
+
+    .book-item {
+      color: params.$mainfontcolor;
+      flex: 1 1 400px;
+      max-width: 460px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .book-item-top {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      .book-cover {
+        height: 250px;
+        border-radius: 4px;
+      }
+
+      .book-links {
+        flex: 1 1 180px;
+
+        .book-link {
+          padding-bottom: 5px;
+
+          a {
+            color: lightblue;
             text-decoration: none;
+          }
+        }
+      }
+
+      .book-item-blurb {
+        h3 {
+          font-weight: 100;
+          font-size: 18px;
+          font-family: params.$mainfont;
+          text-align: center;
+          margin: 0 0 10px;
         }
 
-        .arrow {
-            height: 15px;
-            filter: invert(100%)
+        p {
+          text-align: justify;
+          margin: 0;
         }
-
-        .arrow-one {
-            margin-right: 15px;
-            transform: rotate(90deg);
-        }
-
-        .arrow-two {
-            margin-left: 15px;
-            transform: rotate(-90deg);
-        }
+      }
     }
 
-    .books {
-        padding-right: 150px;
+    .video-container {
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-        .book-item {
-            display: inline-block;
-            margin: 20px;
-            color: params.$mainfontcolor;
-            width: 400px;
-            vertical-align: top;
+      h2,
+      h3 {
+        margin: 0 0 8px;
+      }
 
-            .main-book-content {
-                display: inline-block;
-                width: 250px;
+      iframe,
+      video {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: 6px;
+        background: black;
+      }
+    }
 
-                h3 {
-                    font-weight: 100;
-                    font-size: 18px;
-                    font-family: params.$mainfont;
-                }
-    
-                img {
-                    height: 250px;
-                }
+    .map-container,
+    .character-art {
+      flex: 1 1 360px;
+      max-width: 480px;
+      text-align: center;
 
-                p {
-                    text-align: justify;
-                }
-            }
+      h2 {
+        margin: 0 0 8px;
+      }
 
-            .book-links{
-                display: inline-block;
-                vertical-align: top;
-                padding: 10px;
-                padding-left: 20px;
+      p {
+        margin-top: 0;
+      }
+    }
 
-                .book-link {
-                    margin: 0;
-                    text-align: left;
-                    padding-bottom: 5px;
+    .character-art {
+      img {
+        width: 100%;
+        border-radius: 8px;
+      }
 
-                    a {
-                        margin: 0;
-                        padding: 0;
-                        color: lightblue;
-                        text-decoration: none;
-                    }
-                }
-            }
+      .art-credit {
+        margin-top: 8px;
+        font-size: 0.9em;
+        opacity: 0.8;
+
+        a {
+          color: lightblue;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .map-section {
+    overflow: auto;
+    padding: 0;
+    width: 100%;
+
+    img {
+      width: 100%;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+  }
+
+  .map-selected {
+    position: absolute;
+    background: #00000080;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    width: 100vw;
+    height: calc(100vh);
+
+    img {
+      max-width: none;
+      height: calc(100% - 20px);
+      width: auto;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .map-selected {
+      img {
+        height: 1000px;
+      }
+    }
+  }
+
+  @media (max-width: 570px) {
+    .series-title {
+      .kickstarter-banner {
+        max-height: 90px;
+
+        img {
+          height: 90px;
         }
 
-        .map-container {
-            display: inline-block;
+        .just-funded {
+          width: 90px;
+          font-size: 1em;
+          padding: 0 10px;
         }
 
-        .video-container {
-            height: 500px;
-            display: inline-block;
-
-            iframe {
-                height: 100%;
-            }
+        .ks-tag {
+          font-size: 0.55em;
+          margin-top: 6px;
         }
+
+        .funded-text {
+          font-size: 1.4em;
+        }
+      }
+
+      h2 {
+        font-size: 20px;
+        position: absolute;
+        width: 100%;
+        top: 110px;
+        left: 0;
+        text-align: center;
+      }
     }
 
     .map-section {
-        overflow: auto;
-
-        img {
-            width: 60%;
-            max-width: 500px;
-        }
+      img {
+        width: 80%;
+      }
     }
-    
+
     .map-selected {
-        position: absolute;
-        background: #00000080;
-        top: 0;
-        left: 0;
-        overflow: auto;
-        width: 100vw;
-        height: calc(100vh);
-
-        img {
-            max-width: none;
-            height: calc(100% - 20px);
-            width: auto;
-        }
+      img {
+        width: auto;
+      }
     }
-
-
-    @media(max-width: 900px){
-        .map-selected {
-            img {
-                height: 1000px;
-            }
-        }
-    }
-
-    @media(max-width: 570px){
-        .series-title {
-            img, a {
-                width: 100%;
-            }
-    
-            h2 {
-                font-size: 20px;
-                position: absolute;
-                width: 100%;
-                top: 110px;
-                left: 0;
-                text-align: center;
-            }
-        }
-
-        .map-section {
-            img {
-                width: 80%;
-            }
-        }
-
-        .map-selected {
-            img {
-                width: auto;
-            }
-        }
-    }
+  }
 }
 
 .popup-active {
-    height: 100vh;
-    overflow: hidden;
+  height: 100vh;
+  overflow: hidden;
 }
 
-@media(max-width: 900px){
-    .main-page {
-        padding-bottom: 150px;
-        
-        .books {
-            padding-right: 0;
-            h2 {
-                margin-left: auto;
-                margin-right: auto;
-                width: calc(100% - 100px);
-            }
-        }
+@media (max-width: 900px) {
+  .main-page {
+    padding-bottom: 150px;
+
+    .books {
+      h2 {
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
+  }
 }
 
-@media(max-width: 480px){
-    .main-page {
-        .buy-direct {
-            padding: 10px;
+@media (max-width: 480px) {
+  .main-page {
+    .buy-direct {
+      padding: 10px;
 
-            a {
-                display: inline-block;
-                width: calc(100vw - 120px);
-            }
+      a {
+        display: inline-block;
+        width: calc(100vw - 120px);
+      }
 
-            .arrow {
-                padding-bottom: 18px;
-            }
-        }
-
-        .books {
-            .book-item {
-                display: block;
-                width: 250px;
-                margin-left: calc(50vw - 125px);
-    
-                .book-links{
-                    display: block;
-                    width: 250px;
-                    padding: 0;
-    
-                    .book-link {
-                        margin: 0;
-                        text-align: left;
-                        padding-bottom: 5px;
-    
-                        a {
-                            margin: 0;
-                            padding: 0;
-                            color: lightblue;
-                            text-decoration: none;
-                        }
-                    }
-                }
-            }
-        }
+      .arrow {
+        padding-bottom: 18px;
+      }
     }
+
+    .books .book-item {
+      max-width: 100%;
+    }
+  }
 }

@@ -30,11 +30,7 @@ export const TreeSpherePage = () => {
             alt="TreeScript logo"
           />
           <h2>
-            <a
-              href="https://TreeScript.app"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="https://TreeScript.app" target="_blank" rel="noreferrer">
               TreeScript.app
             </a>
           </h2>
@@ -52,19 +48,13 @@ export const TreeSpherePage = () => {
             alt="TreeReader logo"
           />
           <h2>
-            <a
-              href="https://TreeReader.app"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="https://TreeReader.app" target="_blank" rel="noreferrer">
               TreeReader.app
             </a>
           </h2>
           <ul>
             <li>eReader</li>
-            <li>
-              Lightweight, full featured app with focus on readability
-            </li>
+            <li>Lightweight, full featured app with focus on readability</li>
             <li>Public Domain works access</li>
           </ul>
         </div>

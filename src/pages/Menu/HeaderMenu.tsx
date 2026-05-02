@@ -43,10 +43,8 @@ export class HeaderMenu extends React.Component<{}, MenuState> {
           <NavLink to="/">Home</NavLink>
           <NavLink to="/About">About</NavLink>
           <NavLink to="/Blog">Blog</NavLink>
-          <NavLink to="/Writing">Other Writing</NavLink>
           <NavLink to="/Languages">Language</NavLink>
           <NavLink to="/Recommendations">Recommendations</NavLink>
-          <NavLink to="/AIConsultation">AI Consultation</NavLink>
           <NavLink to="/TreeSphere">TreeSphere Apps</NavLink>
         </div>
         <div className="social">
@@ -98,4 +96,3 @@ export class HeaderMenu extends React.Component<{}, MenuState> {
     );
   }
 }
-
