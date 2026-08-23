@@ -1,3 +1,5 @@
+@use "params";
+
 .popup-wrapper{
     position: absolute;
     top: 0;
@@ -13,24 +15,38 @@
         text-align: center;
 
         .close-button {
-            background: $background;
+            background: params.$background;
             margin-top: 20px;
             padding: 5px;
             width: 50%;
-            color: $mainfontcolor;
+            color: params.$mainfontcolor;
             border: none;
+            cursor: pointer;
+            display: block;
+            margin-left: 25%;
         }
 
         h2 {
-            color: $mainfontcolor;
+            color: params.$mainfontcolor;
         }
 
         .region {
             display: inline-block;
             margin: 20px;
+            cursor: pointer;
 
             img {
+                padding: 11px;
                 height: 150px;
+            }
+        }
+
+        .scot {
+            height: 150px;
+
+            img {
+                padding: 0;
+                height: 175px;
             }
         }
 
@@ -40,9 +56,36 @@
             margin: 10px;
             padding: 5px;
             border-radius: 10px;
+            cursor: pointer;
 
             img {
                 height: 80px;
+            }
+        }
+    }
+
+    @media(max-width: 600px){
+        .regions {
+            width: 400px;
+            margin-left: calc(50% - 200px);
+
+            .retailer {
+                img {
+                    height: 50px;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 400px){
+        .regions {
+            width: 250px;
+            margin-left: calc(50% - 125px);
+
+            .retailer {
+                img {
+                    height: 40px;
+                }
             }
         }
     }

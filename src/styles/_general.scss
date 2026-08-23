@@ -1,20 +1,23 @@
+@use "params";
+
+body {
+    background-color: params.$background;
 #root {
     position: absolute;
     top: 0;
     left: 0;
 
-.App {
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: $background;
-    overflow-x: hidden;
-    text-align: center;
-    color: $mainfontcolor;;
+    .App {
+        margin: 0;
+        min-width: calc(100vw - 20px);
+        overflow-x: none;
+        text-align: center;
+        color: params.$mainfontcolor;
+
+        h1, h2, h3 {
+            font-family: params.$mainfont;
+            font-variant: small-caps;
+        }
     }
 }
-
-h1, h2, h3 {
-    font-family: $mainfont;
-    font-variant: small-caps;
 }

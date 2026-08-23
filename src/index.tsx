@@ -1,30 +1,45 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import MainPage from './Pages/Main/MainPage';
-import reportWebVitals from './reportWebVitals';
-import './App.scss'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import AboutPage from './Pages/About/AboutPage';
-import LanguagePage from './Pages/Language/LanguagePage';
-import RecommendationsPage from './Pages/Recommendations/RecommendationsPage';
-import OtherWritingPage from './Pages/OtherWriting/OtherWritingPage';
+import { MainPage } from "./pages/Main/MainPage";
+import reportWebVitals from "./reportWebVitals";
+import "./App.scss";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import { AboutPage } from "./pages/About/AboutPage";
+import { LanguagePage } from "./pages/Language/LanguagePage";
+import { RecommendationsPage } from "./pages/Recommendations/RecommendationsPage";
+import { OtherWritingPage } from "./pages/OtherWriting/OtherWritingPage";
+import { BlogPage } from "./pages/Blog/BlogPage";
+import { EdNoWriMo } from "./pages/EdNoWriMo/EdNoWriMo";
+import { ReaderDisplay } from "./pages/Reader/ReaderDisplay";
+import { ConsultationResponsePage } from "./pages/AIConsultation/ConsultationResponsePage";
+import { createRoot } from "react-dom/client";
+import { HeaderMenu } from "./pages/Menu/HeaderMenu";
+import { PrivacyPage } from "./pages/TreeReader/PrivacyPage";
+import { TreeSpherePage } from "./pages/TreeSphere/TreeSpherePage";
 
 const routing = (
-    <BrowserRouter>
+  <HashRouter>
+    <div className="App">
+      <HeaderMenu />
       <Routes>
-        <Route path="/" element={<MainPage/>} />
-        <Route path="/About" element={<AboutPage/>} />
-        <Route path="/Languages" element={<LanguagePage/>} />
-        <Route path="/Recommendations" element={<RecommendationsPage/>} />
-        <Route path="/Writing" element={<OtherWritingPage/>} />
+        <Route path="/" element={<MainPage />} />
+        <Route path="/About" element={<AboutPage />} />
+        <Route path="/Blog" element={<BlogPage />} />
+        <Route path="/Languages" element={<LanguagePage />} />
+        <Route path="/Recommendations" element={<RecommendationsPage />} />
+        <Route path="/Writing" element={<OtherWritingPage />} />
+        <Route path="/EdNoWriMo" element={<EdNoWriMo />} />
+        <Route path="/Reader" element={<ReaderDisplay />} />
+        <Route path="/AIConsultation" element={<ConsultationResponsePage />} />
+        <Route path="/Privacy" element={<PrivacyPage />} />
+        <Route path="/PrivacyPolicy" element={<PrivacyPage />} />
+        <Route path="/TreeSphere" element={<TreeSpherePage />} />
+        <Route path="*" element={<MainPage />} />
       </Routes>
-    </BrowserRouter>
-)
-
-ReactDOM.render(routing, document.getElementById('root')
+    </div>
+  </HashRouter>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+const container = document.getElementById("root")!;
+const root = createRoot(container);
+root.render(routing);
+
 reportWebVitals();

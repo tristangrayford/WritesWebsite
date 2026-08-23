@@ -1,0 +1,155 @@
+@use "params";
+
+.endowrimo-page {
+    max-width: 1000px;
+    margin-left: calc(50vw - 500px);
+
+    .stats {
+        padding: 20px;
+        text-align: center;
+
+        .stat-block {
+            background-color: #222299;
+            display: inline-block;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+            width: 120px;
+            height: 100px;
+            vertical-align: top;
+            position: relative;
+
+            p {
+                position: absolute;
+                top: 0;
+                width: calc(100% - 20px);
+            }
+
+            .score {
+                font-weight: bold;
+                vertical-align: bottom;
+                bottom: 0px;
+                top: auto;
+                font-size: 24px;
+            }
+
+            .score-percent {
+                font-weight: bold;
+                vertical-align: bottom;
+                bottom: 20px;
+                top: auto;
+                font-size: 24px;
+            }
+
+            .score-percent-plus {
+                vertical-align: bottom;
+                bottom: 10px;
+                top: auto;
+            }
+        }
+    }
+
+    .recharts-wrapper {
+        width: 100% !important;
+        color: #ffffff;
+
+        text {
+            fill: rgb(255, 255, 255);
+        }
+    }
+
+    .recharts-cartesian-grid-vertical {
+        line {
+            display: none;
+        }
+    }
+
+    .progress {
+        width: calc(100% - 170px);
+        position: relative;
+
+        .progress-header {
+            margin-bottom: 0;
+            margin-top: 40px;
+        }
+
+        .day-input {
+            color: #ffffff50;
+            display: inline-block;
+            padding: 10px;
+
+            h4 {
+                margin-top: 10px;
+                margin-bottom: 5px;
+            }
+
+            input {
+                width: 55px;
+            }
+        }
+
+        .past {
+            color: white;
+        }
+
+        .today  {
+            color: #44f;
+            position: absolute;
+            right: 0;
+            top: 20px;
+            margin-right: -140px;
+            font-size: 30px;
+
+            h4 {
+                text-transform: uppercase;
+            }
+
+            input {
+                font-weight: bold;
+                font-size: 30px;
+                width: 120px;
+            }
+        }
+    }
+
+    .awards {
+        img {
+            display: inline-block;
+            height: 100px;
+        }
+    }
+
+    .project-selector {
+        display: none;
+    }
+
+    .selector-open {
+        display: flex;
+        position: fixed;
+        width: 250px;
+        height: 40px;
+        border: white 1px solid;
+        border-radius: 5px;
+        top: calc(50% - 200px);
+        left: calc(50% - 125px);
+        background-color: params.$background;
+        padding: 20px;
+
+        .select-dropdown {
+            display: inline-block;
+            margin-right: 40px;
+        }
+
+        button {
+            display: inline-block;
+            vertical-align: top;
+            height: 23px;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .endowrimo-page {
+        margin-left: 0;
+    }
+}

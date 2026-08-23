@@ -1,0 +1,169 @@
+@use "params";
+
+.goodreads {
+  background-color: params.$background;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  font-family: params.$mainfont;
+  color: params.$mainfontcolor;
+  text-align: center;
+
+  .gr_title {
+    display: block;
+    padding-bottom: 20px;
+    font-family: params.$mainfont;
+    font-variant: small-caps;
+    font-size: 1.6em !important;
+    color: params.$mainfontcolor !important;
+  }
+
+  .gr_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    font-family: params.$mainfont;
+
+    a {
+      color: lightblue;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    img {
+      border: 0;
+    }
+
+    .gr_book_container {
+      padding: 12px;
+      border-bottom: none;
+      background-color: rgba(255, 255, 255, 0.04);
+      border-radius: 8px;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: flex-start;
+      text-align: left;
+      max-width: 260px;
+      min-height: 110px;
+
+      .gr_book_image {
+        float: none;
+        padding-right: 15px;
+        flex-shrink: 0;
+      }
+
+      .gr_review_stats {
+        vertical-align: top;
+        text-align: left;
+        color: params.$mainfontcolor;
+      }
+    }
+  }
+
+  #goodreads-widget {
+    font-family: params.$mainfont;
+    padding: 30px 0 0;
+    max-width: 100%;
+
+    h1 {
+      font-weight: normal;
+      font-size: 1.3em;
+      font-variant: small-caps;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      margin-bottom: 0;
+      padding-bottom: 8px;
+    }
+
+    a {
+      text-decoration: none;
+      color: lightblue;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .gr_branding {
+      color: params.$mainfontcolor;
+      font-size: 11px;
+      text-decoration: none;
+      opacity: 0.7;
+    }
+  }
+
+  iframe {
+    background-color: #fff;
+    max-width: 1000px;
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+  }
+
+  .gr_reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  .gr_review {
+    display: block;
+    padding: 16px 18px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    color: params.$mainfontcolor;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.09);
+      text-decoration: none;
+    }
+
+    .gr_review_head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 8px 12px;
+      margin-bottom: 8px;
+    }
+
+    .gr_reviewer {
+      font-weight: bold;
+      font-variant: small-caps;
+    }
+
+    .gr_stars {
+      color: gold;
+      letter-spacing: 1px;
+    }
+
+    .gr_date {
+      margin-left: auto;
+      font-size: 0.85em;
+      opacity: 0.7;
+    }
+
+    .gr_review_text {
+      margin: 0;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 0.95em;
+      line-height: 1.45;
+    }
+  }
+
+  #gr_footer {
+    width: 100%;
+    max-width: 1000px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: right;
+    padding-top: 6px;
+    margin-top: 4px;
+  }
+}

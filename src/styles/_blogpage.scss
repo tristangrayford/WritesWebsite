@@ -1,0 +1,54 @@
+.blog-page {
+  h1 {
+    display: inline-block;
+  }
+  a {
+    color: lightblue;
+    font-size: 40px;
+    text-decoration: none;
+  }
+
+  .arrow {
+    padding-bottom: 0px;
+  }
+
+  .arrow {
+    height: 30px;
+    filter: invert(100%);
+  }
+
+  .arrow-one {
+    margin-right: 15px;
+    transform: rotate(90deg);
+  }
+
+  .arrow-two {
+    margin-left: 15px;
+    transform: rotate(-90deg);
+  }
+
+  .post-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px auto 0;
+    max-width: 600px;
+    text-align: left;
+
+    li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      a {
+        font-size: 18px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

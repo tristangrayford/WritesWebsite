@@ -1,0 +1,85 @@
+import profile from "../../images/Profile.png";
+import treeSphereLogo from "../../images/logos/TreeSphere.png";
+import treeScriptLogo from "../../images/logos/TreeScript.png";
+import treeReaderLogo from "../../images/logos/TreeReader.png";
+
+export const AboutPage = () => {
+  return (
+    <div className="about-page">
+      <div className="half">
+        <h1>About</h1>
+        <p>
+          Tristan Gray was a latecomer to Scotland, moving to the north from
+          Jersey in 2014.
+        </p>
+        <p>
+          After years of searching to find the real spark behind his writing
+          Scotland unlocked it - The rugged country and dark history, which also
+          inspired the works of George R. Martin, David Gemmell, and the
+          thriving local Science Fiction and Fantasy scene, gave new meaning to
+          the fantasy tales of his childhood.
+        </p>
+        <p>
+          Now, with a new connection to an adopted home driving his work, and
+          inspiration stretching from conventional novels, to graphic novels, to
+          games, Tristan is writing tales worthy of the inspiration by the land
+          around him.
+        </p>
+        <p>
+          Tristan released his debut novel, ‘Call of the Black Wing’ in August
+          2024. The local writing community page can be found at{" "}
+          <a href="https://edinburghsff.com/">edinburghsff.com</a>.
+        </p>
+      </div>
+      <div className="half">
+        <img alt="Profile" src={profile} />
+      </div>
+      <div className="treesphere-about">
+        <div className="treesphere-heading">
+          <img
+            className="treesphere-logo"
+            src={treeSphereLogo}
+            alt="TreeSphere logo"
+          />
+          <h2>TreeSphere</h2>
+        </div>
+        <p>
+          Alongside his writing, Tristan builds the TreeSphere suite of apps for
+          writers and readers - tools designed to make storytelling and reading
+          richer experiences across web and Android.
+        </p>
+        <div className="treesphere-apps">
+          <a
+            className="treesphere-app"
+            href="https://treescript.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={treeScriptLogo} alt="TreeScript logo" />
+            <h3>TreeScript</h3>
+            <p>
+              A writing app that helps authors plan, draft, and organise their
+              stories.
+            </p>
+          </a>
+          <a
+            className="treesphere-app"
+            href="https://treereader.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={treeReaderLogo} alt="TreeReader logo" />
+            <h3>TreeReader</h3>
+            <p>
+              A reader designed to bring stories to life with a clean, focused
+              reading experience.
+            </p>
+          </a>
+        </div>
+        <p className="treesphere-link">
+          Learn more on the <a href="#/TreeSphere">TreeSphere page</a>.
+        </p>
+      </div>
+    </div>
+  );
+};
