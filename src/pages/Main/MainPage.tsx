@@ -4,7 +4,7 @@ import BuyLinksUS from "../../dtos/BuyLinksUS";
 import { GoodreadsWidget } from "./GoodreadsWidget";
 import whispers from "../../images/book-covers/small/Whispers.webp";
 import blackwing from "../../images/book-covers/small/Blackwing.webp";
-import kickstarter from "../../images/KickStarter Lead Wide.webp";
+import librofm from "../../images/libro.fm.png";
 import map from "../../images/Seann Aite.webp";
 import characters from "../../images/Fiadh and Annis.png";
 import arrow from "../../images/Arrow.webp";
@@ -62,10 +62,10 @@ export const MainPage = () => {
       <div className="series-title">
         <a
           className="kickstarter-banner"
-          href="https://www.kickstarter.com/projects/tristangray/call-of-the-black-wing-an-audiobook"
+          href="https://libro.fm/audiobooks/9798240157820-call-of-the-black-wing"
         >
           <img
-            src={kickstarter}
+            src={librofm}
             alt="Call of the Black Wing Audiobook Kickstarter"
           />
         </a>
